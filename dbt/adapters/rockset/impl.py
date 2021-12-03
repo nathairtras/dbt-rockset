@@ -691,7 +691,7 @@ class RocksetAdapter(BaseAdapter):
         while total_sleep_time < max_wait_time_secs:
             if not self._does_view_exist(ws, view):
                 logger.debug(
-                    f'View {ws}.{cname} does not exist. This is likely a transient consistency error.')
+                    f'View {ws}.{view} does not exist. This is likely a transient consistency error.')
                 sleep(sleep_secs)
                 total_sleep_time += sleep_secs
                 continue
